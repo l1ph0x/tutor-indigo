@@ -23,7 +23,8 @@ const IndigoFooter = () => {
     },
     "footer.copyright.text": {
       id: "footer.copyright.text",
-      defaultMessage: `Copyrights ©${new Date().getFullYear()}. All Rights Reserved.`,
+      //defaultMessage: `Copyrights ©${new Date().getFullYear()}. All Rights Reserved.`,
+      defaultMessage: `საავტორო უფლებები ©${new Date().getFullYear()}. ყველა უფლება დაცულია.`,
       description: "copyright text for the footer",
     },
   };
