@@ -39,10 +39,10 @@ header.global-header {
     .main-header {
         display: flex;
         align-items: center;
-        height: 60px;
+        height: 60px; // Increased from 50px to accommodate 50px logo + padding
 
         @include media-breakpoint-up(lg) {
-            display: flex;
+            display: flex; // Changed from unset to maintain vertical alignment
             height: 60px;
         }
     }
@@ -53,7 +53,7 @@ header.global-header {
         align-items: center;
         
         a {
-            margin: 5px 0 5px 35px;
+            margin: 5px 0 5px 35px; // Reduced vertical margin to center 50px logo in 60px bar
             height: 50px;
             display: flex;
             align-items: center;
@@ -63,7 +63,7 @@ header.global-header {
             }
 
             .logo {
-                height: 50px;
+                height: 50px; // Updated from 24px
                 width: auto;
                 margin: 0;
 
@@ -73,7 +73,7 @@ header.global-header {
             }
 
             .logo-white {
-                height: 50px;
+                height: 50px; // Updated from 24px
                 width: auto;
                 display: none;
 
@@ -99,7 +99,7 @@ header.global-header {
                     font-size: 14px;
                     font-weight: 500;
                     line-height: 22px;
-                    padding: 19px 0;
+                    padding: 19px 0; // Adjusted padding to center text in 60px header
                     color: $light-dark;
                     margin: 0 16px 0 0;
                     border-bottom: 2px solid transparent;
@@ -113,7 +113,7 @@ header.global-header {
         }
 
         .secondary {
-            margin-left: auto; // ✅ FIX APPLIED HERE
+            margin: 0;
             position: relative;
             justify-content: end;
             display: flex;
@@ -127,7 +127,7 @@ header.global-header {
                 font-weight: 500;
                 line-height: 20px;
                 border-radius: 6px;
-                margin: 0;
+                margin: 0; // Removed margin to let flex center it
 
                 &:after {
                     margin: 4px 0 0 4px;
@@ -150,7 +150,7 @@ header.global-header {
             .dropdown-user-menu {
                 position: absolute;
                 right: 0;
-                top: 60px;
+                top: 60px; // Adjusted for 60px header
                 width: 224px;
                 border-radius: 6px;
                 box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.10);
@@ -184,7 +184,7 @@ header.global-header {
         height: 17px;
         width: 20px;
         left: 15px;
-        top: 22px;
+        top: 22px; // Adjusted for 60px header
         background: none;
         border: 0;
         padding: 0;
@@ -205,7 +205,7 @@ header.global-header {
 .mobile-menu {
     position: absolute;
     left: 0;
-    top: 60px;
+    top: 60px; // Matched to header height
     z-index: 9999;
     margin: 0;
     border: none;
@@ -338,3 +338,4 @@ body.indigo-dark-theme {
         }
     }
 }
+

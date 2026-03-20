@@ -11,3 +11,5 @@ __pycache__
 *~
 /temp
 /.vscode
+__pycache__/
+*.pyc

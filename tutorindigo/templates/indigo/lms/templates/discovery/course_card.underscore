@@ -13,7 +13,9 @@
             </h2>
             <a href="/courses/<%- course %>/about" class="learn-more" aria-label="">
               <%- gettext("Learn More") %>
-              <span class="sr-only">about <%- content.display_name %></span>
+             <span class="sr-only">შესახებ <%- content.display_name %></span>
+              <!-- <span class="sr-only">  <%- interpolate(gettext("about %(course)s"), { course: content.display_name }, true) %>  -->
+              </span>
             </a>
             <div class="course-date" aria-hidden="true">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none" aria-hidden="true">

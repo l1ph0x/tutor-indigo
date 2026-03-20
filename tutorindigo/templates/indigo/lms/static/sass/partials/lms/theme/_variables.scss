@@ -2,10 +2,27 @@ $primary: {{ INDIGO_PRIMARY_COLOR }};
 $primary-light: #F2F7F8;
 
 // Theme fonts
+
+/*
+
 $font-family-title: 'Inter', sans-serif;
 $serif: Crimson;
 $f-sans-serif: Crimson, 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+// Initialize the Open edX Bootstrap theme
+@import 'edx-bootstrap/sass/open-edx/theme';
+
+*/
+
+// Define Georgian Font Stack
+$font-family-title: "BPG Arial", sans-serif;
+$f-sans-serif: "BPG Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Remove the Crimson/Inter dependencies
+$serif: "BPG Arial", serif; // Falling back to Arial even for serif needs
+
+// Removed the Google Font Import
+
 // Initialize the Open edX Bootstrap theme
 @import 'edx-bootstrap/sass/open-edx/theme';
 

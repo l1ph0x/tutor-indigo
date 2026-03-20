@@ -1721,3 +1721,8 @@ body.indigo-dark-theme {
 @import '../../../views/teams';
 @import '../../../views/wiki';
 @import '../../../courseware/responsive-nav';
+
+// Smaller size of the button that sends selected language to MFE layer
+button#footer-language-button.btn-edged-blue.select-lang-button {
+  padding: 1px 10px !important;
+}

@@ -122,8 +122,9 @@ for mfe in indigo_styled_mfes:
             (
                 f"mfe-dockerfile-post-npm-install-{mfe}",
                 """
-RUN npm install '@edx/brand@github:@edly-io/brand-openedx#indigo-2.5.0'
-""",  # noqa: E501
+RUN npm install '@edx/brand@git+https://github.com/l1ph0x/brand-openedx.git#indigo-2.5.0-ka.4'
+
+""",
             ),
         ]
     )
@@ -131,7 +132,7 @@ RUN npm install '@edx/brand@github:@edly-io/brand-openedx#indigo-2.5.0'
 hooks.Filters.ENV_PATCHES.add_item(
     (
         "mfe-dockerfile-post-npm-install-authn",
-        "RUN npm install '@edx/brand@github:@edly-io/brand-openedx#indigo-2.5.0'",
+        "RUN npm install '@edx/brand@git+https://github.com/l1ph0x/brand-openedx.git#indigo-2.5.0-ka.4'",
     )
 )
 
@@ -296,25 +297,45 @@ PLUGIN_SLOTS.add_items(
     ]
 )
 
+
+LOGO_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/heads/indigo-2.5.0-ka/logo.svg"
+LOGO_WHITE_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/heads/indigo-2.5.0-ka/logo-white.svg"
+LOGO_TRADEMARK_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/heads/indigo-2.5.0-ka/logo-trademark.svg"
+FAVICON_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/heads/indigo-2.5.0-ka/favicon.ico"
+
 paragon_theme_urls = {
+    "core": {
+        "urls": {
+            "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@23.4.5/dist/core.min.css",
+            "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.0-ka.4/dist/core.min.css?v=20260319-1",
+        },
+    },
+    "defaults": {
+        "light": "light",
+        "dark": "dark",
+    },
     "variants": {
         "light": {
             "urls": {
-                "default": "https://raw.githubusercontent.com/edly-io/brand-openedx/refs/heads/ulmo/indigo/dist/light.min.css",
-                "brandOverride": "https://raw.githubusercontent.com/edly-io/brand-openedx/refs/heads/ulmo/indigo/dist/light.min.css",
+                "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@23.4.5/dist/light.min.css",
+                "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.0-ka.4/dist/light.min.css?v=20260319-1",
             },
         },
         "dark": {
             "urls": {
-                "default": "https://raw.githubusercontent.com/edly-io/brand-openedx/refs/heads/ulmo/indigo/dist/dark.min.css",
-                "brandOverride": "https://raw.githubusercontent.com/edly-io/brand-openedx/refs/heads/ulmo/indigo/dist/dark.min.css",
-            }
+                "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@23.4.5/dist/dark.min.css",
+                "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.0-ka.4/dist/dark.min.css?v=20260319-1",
+            },
         },
-    }
+    },
 }
 
 fstring = f"""
 MFE_CONFIG["PARAGON_THEME_URLS"] = {json.dumps(paragon_theme_urls)}
+MFE_CONFIG["LOGO_URL"] = "{LOGO_URL}"
+MFE_CONFIG["LOGO_WHITE_URL"] = "{LOGO_WHITE_URL}"
+MFE_CONFIG["LOGO_TRADEMARK_URL"] = "{LOGO_TRADEMARK_URL}"
+MFE_CONFIG["FAVICON_URL"] = "{FAVICON_URL}"
 """
 
 hooks.Filters.ENV_PATCHES.add_item(("mfe-lms-common-settings", fstring))

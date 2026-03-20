@@ -46,3 +46,43 @@
   font-weight: 700;
   font-style: italic;
 }
+
+// Add any font imports or definitions here
+/* Regular weight */
+@font-face {
+    font-family: "BPG Arial";
+    src: url("../static/fonts/bpg-arial.woff2") format("woff2"),
+         url("../static/fonts/bpg-arial.woff") format("woff");
+    font-weight: 400; // Regular
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Bold weight - pointing to the Glaho file but keeping the Arial name */
+@font-face {
+    font-family: "BPG Arial"; // Keep the name the same!
+    src: url("../static/fonts/bpg-glaho-bold-webfont.woff2") format("woff2"),
+         url("../static/fonts/bpg-glaho-bold-webfont.woff") format("woff");
+    font-weight: 700; // Bold
+    font-style: normal;
+    font-display: swap;
+}
+
+/* GEORGIAN CAPS (Mtavruli) */
+@font-face {
+    font-family: "BPG Arial Caps"; 
+    src: url("../static/fonts/bpg-nino-mtavruli-webfont.woff2") format("woff2"),
+         url("../static/fonts/bpg-nino-mtavruli-webfont.woff") format("woff");
+    font-weight: 400; 
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "BPG Arial Caps"; // Keep the name the same as above!
+    src: url("../static/fonts/bpg-nino-mtavruli-bold-webfont.woff2") format("woff2"),
+         url("../static/fonts/bpg-nino-mtavruli-bold-webfont.woff") format("woff");
+    font-weight: 700; 
+    font-style: normal;
+    font-display: swap;
+}
