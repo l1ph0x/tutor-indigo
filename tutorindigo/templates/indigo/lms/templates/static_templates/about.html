@@ -10,9 +10,25 @@
         <h1>
             <%block name="pageheader">${page_header or _("About")}</%block>
         </h1>
-        <p>
-            <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
-        </p>
+
+        <%block name="pagecontent">
+            <section class="about-content" lang="ka">
+                <div class="container">
+                    <p>
+                        სსიპ - მასწავლებელთა პროფესიული განვითარების ეროვნული ცენტრის მთავარი მიზანია
+                        სწავლა-სწავლების ხარისხის გაუმჯობესება ბენეფიციართა პროფესიული ცოდნის
+                        განვითარებისა და მაღალი სტანდარტების დანერგვის გზით.
+                    </p>
+
+                    <p>
+                        აღნიშნული მიზნის მისაღწევად, Open edX-ის პლატფორმაზე შემოგთავაზებთ კურსის ინსტრუქტორის მიერ წარმართულ 
+                        და თვითრეგულირებად ონლაინ კურსებს, რომლებიც შექმნილია ცენტრის ბენეფიციარებისთვის, მათი პროფესიული 
+                        განვითარების ხელშეწყობისა და სწავლების პროცესში მოქნილი შესაძლებლობების უზრუნველსაყოფად.
+                    </p>
+                </div>
+            </section>
+        </%block>
+
         <!-- NEW IN INDIGO: add graphic image -->
         <div class="graphic-img">
             <img src="${static.url('images/about.svg')}" alt="Runs on Tutor" />

@@ -10,9 +10,38 @@
         <h1>
             <%block name="pageheader">${page_header or _("Terms of Service")}</%block>
         </h1>
-        <p>
-            <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
-        </p>
+
+        <%block name="pagecontent">
+            <section class="tos-content" lang="ka">
+                <div class="container">
+                    <p>
+                        წინამდებარე პირობები არეგულირებს TPDCx პლატფორმაზე სსიპ - მასწავლებელთა
+                        პროფესიული განვითარების ეროვნული ცენტრის მიერ შეთავაზებული კურსებით
+                        სარგებლობის წესებსა და პირობებს.
+                    </p>
+
+                    <p>
+                        კურსებში მონაწილეობა უფასოა და ხელმისაწვდომია ცენტრის ყველა ბენეფიციარისთვის.
+                    </p>
+
+                    <p>
+                        კურსის მასალები, მათ შორის ვიდეოები, ტექსტები და დავალებები, განკუთვნილია
+                        მხოლოდ საგანმანათლებლო მიზნებისთვის. მომხმარებელი ვალდებულია კეთილსინდისიერად
+                        გაიაროს კურსი, დამოუკიდებლად შეასრულოს დავალებები.
+                    </p>
+
+                    <p>
+                        მასალების კომერციული მიზნებისთვის გამოყენება ან გავრცელება აკრძალულია.
+                    </p>
+
+                    <p>
+                        ცენტრი იტოვებს უფლებას, ნებისმიერ დროს განაახლოს კურსის შინაარსი ან შეცვალოს
+                        მომსახურების პირობები.
+                    </p>
+                </div>
+            </section>
+        </%block>
+
         <!-- NEW IN INDIGO: add graphic image -->
         <div class="graphic-img">
             <img src="${static.url('images/tos.svg')}" alt="Runs on Tutor" />

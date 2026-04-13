@@ -112,17 +112,7 @@ from openedx.core.lib.courses import course_image_url
             </a>
           %endif
         %else:
-          <%
-            if ecommerce_checkout:
-              reg_href = ecommerce_checkout_link
-            else:
-              reg_href="#"
-            if single_paid_mode:
-              href_class = "add-to-cart"
-            else:
-              href_class = "register"
-          %>
-          <a href="${reg_href}" class="${href_class}">
+          <a href="/login?course_id=${course.id}&enrollment_action=enroll&course_mode=honor">
             ${_("Enroll Now")}
           </a>
           <div id="register_error"></div>
@@ -152,7 +142,7 @@ from openedx.core.lib.courses import course_image_url
 
     <div class="course-sidebar">
       <div class="course-summary">
-        <h2>კურსის შესახებ</h2>
+        <h2>Course Summary</h2>
         <%block name="course_about_important_dates">
         <ol class="important-dates">
           <li class="important-dates-item">

@@ -10,9 +10,33 @@
         <h1>
             <%block name="pageheader">${page_header or _("Contact")}</%block>
         </h1>
-        <p>
-            <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
-        </p>
+
+        <%block name="pagecontent">
+            <section class="contact-content" lang="ka">
+                <div class="container">
+                    <p><strong>მისამართი:</strong> საქართველო, თბილისი 0186, ზურაბ ანჯაფარიძის I შესახვევი N6</p>
+
+                    <p>
+                        <strong>ცხელი ხაზი:</strong><br>
+                        +995 (32) 2 200220 (47 08)<br>
+                        +995 (32) 2 200 220 (47 11)
+                    </p>
+
+                    <p>
+                        <strong>ელ. ფოსტა:</strong>
+                        <a href="mailto:edx.lms@tpdc.ge">edx.lms@tpdc.ge</a>
+                    </p>
+
+                    <p><strong>პერსონალურ მონაცემთა დაცვის ოფიცერი:</strong> ნინო გურგენიძე</p>
+
+                    <p>
+                        <strong>ელ-ფოსტა:</strong>
+                        <a href="mailto:gurgenidzenino@tpdc.ge">gurgenidzenino@tpdc.ge</a>
+                    </p>
+                </div>
+            </section>
+        </%block>
+
         <!-- NEW IN INDIGO: add graphic image -->
         <div class="graphic-img">
             <img src="${static.url('images/contact.svg')}" alt="Runs on Tutor" />

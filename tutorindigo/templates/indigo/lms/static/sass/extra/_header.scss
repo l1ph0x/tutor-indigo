@@ -321,18 +321,51 @@ header.global-header {
 body.indigo-dark-theme {
     background: $body-bg-d !important;
     color: $text-color-d !important;
+
     .window-wrap {
         background: $body-bg-d;
     }
+
     .mobile-menu {
         top: 60px;
+
         .mobile-nav-link {
             a {
                 background: #454545;
                 color: $text-color-d;
+
                 &:hover, &.active {
                     background: #323232;
                     color: $text-color-d;
+                }
+            }
+        }
+    }
+
+    /* === FIX (from upstream release) === */
+    .theme-toggle-button {
+        .light-theme-icon, .dark-theme-icon {
+            color: $text-color-primary;
+        }
+
+        #toggle-switch {
+            .switch {
+
+                input {
+                    &:focus {
+                        ~ .slider {
+                            outline-color: $primary-d;
+                        }
+                    }
+                }
+
+                .slider {
+                    background-color: $dark-theme-switch-bg-color;
+
+                    &::before {
+                        transform: translateX(19px);
+                        box-shadow: 0 0 1px $primary-d;
+                    }
                 }
             }
         }

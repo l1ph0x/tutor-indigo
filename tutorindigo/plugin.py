@@ -122,8 +122,7 @@ for mfe in indigo_styled_mfes:
             (
                 f"mfe-dockerfile-post-npm-install-{mfe}",
                 """
-RUN npm install '@edx/brand@git+https://github.com/l1ph0x/brand-openedx.git#indigo-2.5.0-ka.4'
-
+RUN npm install '@edx/brand@git+https://github.com/l1ph0x/brand-openedx.git#indigo-2.5.1-ka.1'
 """,
             ),
         ]
@@ -132,7 +131,7 @@ RUN npm install '@edx/brand@git+https://github.com/l1ph0x/brand-openedx.git#indi
 hooks.Filters.ENV_PATCHES.add_item(
     (
         "mfe-dockerfile-post-npm-install-authn",
-        "RUN npm install '@edx/brand@git+https://github.com/l1ph0x/brand-openedx.git#indigo-2.5.0-ka.4'",
+        "RUN npm install '@edx/brand@git+https://github.com/l1ph0x/brand-openedx.git#indigo-2.5.1-ka.1'",
     )
 )
 
@@ -298,16 +297,16 @@ PLUGIN_SLOTS.add_items(
 )
 
 
-LOGO_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/heads/indigo-2.5.0-ka/logo.svg"
-LOGO_WHITE_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/heads/indigo-2.5.0-ka/logo-white.svg"
-LOGO_TRADEMARK_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/heads/indigo-2.5.0-ka/logo-trademark.svg"
-FAVICON_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/heads/indigo-2.5.0-ka/favicon.ico"
+LOGO_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/tags/indigo-2.5.1-ka.1/logo.png"
+LOGO_WHITE_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/tags/indigo-2.5.1-ka.1/logo-white.png"
+LOGO_TRADEMARK_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/tags/indigo-2.5.1-ka.1/logo-trademark.png"
+FAVICON_URL = "https://raw.githubusercontent.com/l1ph0x/brand-openedx/refs/tags/indigo-2.5.1-ka.1/favicon.ico"
 
 paragon_theme_urls = {
     "core": {
         "urls": {
             "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@23.4.5/dist/core.min.css",
-            "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.0-ka.4/dist/core.min.css?v=20260319-1",
+            "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.1-ka.1/dist/core.min.css?v=20260413-1",
         },
     },
     "defaults": {
@@ -318,13 +317,13 @@ paragon_theme_urls = {
         "light": {
             "urls": {
                 "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@23.4.5/dist/light.min.css",
-                "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.0-ka.4/dist/light.min.css?v=20260319-1",
+                "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.1-ka.1/dist/light.min.css?v=20260413-1",
             },
         },
         "dark": {
             "urls": {
                 "default": "https://cdn.jsdelivr.net/npm/@openedx/paragon@23.4.5/dist/dark.min.css",
-                "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.0-ka.4/dist/dark.min.css?v=20260319-1",
+                "brandOverride": "https://cdn.jsdelivr.net/gh/l1ph0x/brand-openedx@indigo-2.5.1-ka.1/dist/dark.min.css?v=20260413-1",
             },
         },
     },

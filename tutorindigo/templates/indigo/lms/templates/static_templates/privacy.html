@@ -2,7 +2,6 @@
 <%page expression_filter="h"/>
 <%! from django.utils.translation import gettext as _ %>
 
-
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("Privacy Policy")}</%block>
@@ -12,9 +11,32 @@
         <h1>
             <%block name="pageheader">${page_header or _("Privacy Policy")}</%block>
         </h1>
-        <p>
-            <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
-        </p>
+
+        <%block name="pagecontent">
+            <section class="privacy-policy" lang="ka">
+                <div class="container">
+                    <h2>პერსონალური მონაცემების დაცვა</h2>
+                    <p>
+                        სსიპ - მასწავლებელთა პროფესიული განვითარების ეროვნული ცენტრი პატივს სცემს
+                        პლატფორმის მომხმარებელთა კონფიდენციალურობას და იცავს მათ პერსონალურ მონაცემებს
+                        საქართველოს კანონმდებლობის შესაბამისად. კურსზე რეგისტრაციისას შეგროვდება მხოლოდ
+                        ის მონაცემები, რომლებიც აუცილებელია სასწავლო პროცესის მართვისთვის
+                        (სახელი, გვარი, ელ. ფოსტა, პროფესიული სტატუსი). აღნიშნული ინფორმაცია
+                        გამოიყენება მხოლოდ კურსის ადმინისტრირებისა და სერტიფიცირების მიზნებისთვის
+                        და არ გადაეცემა მესამე პირს. მომხმარებელს უფლება აქვს, ნებისმიერ დროს
+                        მოითხოვოს საკუთარი მონაცემების გასწორება ან წაშლა.
+                    </p>
+
+                    <h2>კონტაქტი</h2>
+                    <p>
+                        მსგავსი თხოვნის შემთხვევაში, გთხოვთ, დაუკავშირდით პლატფორმის TPDCx
+                        თანამშრომლებს შემდეგ
+                        <a href="mailto:edx.lms@tpdc.ge">ელ-ფოსტის მისამართზე</a>.
+                    </p>
+                </div>
+            </section>
+        </%block>
+
         <!-- NEW IN INDIGO: add graphic image -->
         <div class="graphic-img">
             <img src="${static.url('images/privacy.svg')}" alt="Runs on Tutor" />
